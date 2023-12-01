@@ -74,6 +74,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1.2rem;
+    cursor:pointer;
 }
 
 .line {
@@ -1356,4 +1357,5 @@ textarea::placeholder {
     .container-formulario input {
         width: 100%;
     }
+    
 }

@@ -27,4 +27,31 @@ td{
 tr:hover {
     background-image: linear-gradient(to bottom, #545e83, #6b6d95, #827da7, #9a8cb9, #b39cca, #b59dcc, #b69fcf, #b8a0d1, #a393c5, #8d87b9, #787bac, #626f9f);
 }
+.views-container {
+    display: flex;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width:50%;
+    align-items: center;
+    justify-self: center;
+    height: 100px;
+    justify-content: space-around;  
+    border: 2px solid green; 
+    margin-top: 2%;
+}
 
+#feedback{
+    font-size: clamp(1.7rem, -1.1013rem + 6.7241vw, 3.4375rem);
+}
+.show-view,.footer-view {
+    position:relative;
+    border: 2px solid red;
+    top:50%;
+}
+
+@media screen and (max-width: 900px) {
+    .menu{
+        padding: 0px 10px;
+    }
+}
