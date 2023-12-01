@@ -35,10 +35,9 @@ tr:hover {
     width:50%;
     align-items: center;
     justify-self: center;
-    height: 100px;
     justify-content: space-around;  
     border: 2px solid green; 
-    margin-top: 2%;
+
 }
 
 #feedback{
@@ -49,9 +48,25 @@ tr:hover {
     border: 2px solid red;
     top:50%;
 }
-
+.show-view{
+    display: block;
+    height: 70vh;
+}
 @media screen and (max-width: 900px) {
     .menu{
         padding: 0px 10px;
     }
+}
+
+#spinner-container{
+    border: 2px solid violet;
+    height: 50vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#spinner{
+    width: 4rem; height: 4rem;
+    color: seashell;
 }

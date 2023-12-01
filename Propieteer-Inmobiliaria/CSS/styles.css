@@ -571,13 +571,12 @@ footer>ul>li {
     margin-right: 4px;
 }
 
-
 #app{
     display:block;
     text-align: center;
     box-sizing: border-box;
-    height: 100%;
-    margin: 5% 0 4% 0;
+    height: 50%;
+    margin: 5% 0 0% 0;
 }
 .other-agents-title{
     margin: 5% 0 4% 0;
@@ -593,7 +592,7 @@ footer>ul>li {
     margin: 20px;
     max-width: fit-content;
     box-shadow: 0px 0px 10px rgba(9, 6, 10, 0.951); 
-    background-image: linear-gradient(to bottom, #6a2d7cb2, #051a2f, #1a2657, #4d2a77, #8b19876b);
+    background-image: linear-gradient(to bottom, #6a2d7c80, #051a2f, #1a2657, #4d2a776e, #8b19876b)
 }
 .nombre-agente{
     text-align: left;
