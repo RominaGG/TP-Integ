@@ -21,7 +21,7 @@ const miAplicacion = Vue.createApp({
         // lo primero que carga es la view del home
         this.home_view = true
         // y cancela el load del spinner
-        //this.loading = false
+        this.loading = false
     },
     // definimos las fx para cambiar la view activa cuando el admin aprete los botones
     // de nuevo debemos poner en FALSE las demas views excepto la que elija el admin

@@ -1,0 +1,23 @@
+- Hacer:
+
+integrar las apps en la misma html
+
+(para tabla vendedores)
+
+asociar a NUEVO -> agregar-vendedor.html
+    -formulario (method = post en BBDD )
+asociar a EDITAR -> modificar-vendedor.html
+    -formulario (method = put/patch en BBDD )
+asociar a DELETE -> borrar registro de BBDD (fila -> ID)
+
+
+
+(para tabla propiedades)
+
+view-propiedades.js 
+    - objeto VUE completo (mostrar tabla,funciones)
+asociar a NUEVO -> agregar-propiedad.html
+    -formulario (method = post en BBDD )
+asociar a EDITAR -> modificar-propiedad.html
+    -formulario (method = put/patch en BBDD)
+asociar a DELETE -> borrar registro de BBDD (fila -> ID)
