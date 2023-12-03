@@ -1,0 +1,46 @@
+.header-views {
+    display: block;
+    z-index: 5;
+}
+
+.views-container {
+    display: flex;
+    margin-top: 50px;
+    left: 25%;
+    width: 80vw;
+    align-items: center;
+    justify-self: center;
+    justify-content: space-around;
+    border: 2px solid rgb(116, 122, 116);
+}
+.show-view {
+    margin-top: 150px;
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    height: 50vh;
+}
+.show-view>h4{
+    font-family:'Quicksand'!important;
+    font-weight: 400!important;
+}
+.menu>a:hover{
+    color:rgb(255, 255, 255);
+    font-weight: 400;
+}
+#feedback {
+    margin-top: 200px;
+    font-size: clamp(1.7rem, -1.1013rem + 6.7241vw, 3.2375rem);
+}
+#spinner-container {
+    height: 50vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#spinner {
+    width: 4rem;
+    height: 4rem;
+    color: seashell;
+}

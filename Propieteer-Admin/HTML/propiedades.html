@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body class="body-index-page body-show">
+    <header class="header-views">
+        
+    </header>
+    <main class="main-pestañas show-view">
+
+        <div id="view_propiedades" class="container">
+            <div v-if="loading" id="spinner-container">
+                <div class="spinner-border" id="spinner"> </div>
+            </div>
+
+            <div v-else>
+                <h1>Propiedades</h1>
+                <a class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
+                <div v-if="error">
+                    <p>Lo sentimos , ........</p>
+                </div>
+                <div v-else>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-dark">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Descripcion</th>
+                                    <th scope="col">Ambientes</th>
+                                    <th scope="col">Direccion</th>
+                                    <th scope="col">Provincia</th>
+                                    <th scope="col">Barrio</th>
+                                    <th scope="col">Mts2</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Propietario</th>
+                                    <th scope="col">Tel-contacto</th>
+                                    <th scope="col">Mail-contacto</th>
+                                    <th scope="col"> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <tr class="" v-for="vendedor in vendedores">
+                                    <td scope="row">{{vendedor.idVendedor}}</td>
+                                    <td>{{vendedor.apellido}}</td>
+                                    <td>{{vendedor.nombre}}</td>
+                                    <td>{{vendedor.matricula}}</td>
+                                    <td>{{vendedor.profesion}}</td>
+                                    <td>{{vendedor.mail}}</td>
+                                    <td>{{vendedor.telefono}}</td>
+                                    <td>{{vendedor.sueldo}}</td>
+                                    <td>
+                                        <img style="width: 50px;" :src="vendedor.imagen" :alt="vendedor.nombre">
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary"
+                                            :href="'vendedor_update.html?id='+ vendedor.idVendedor">Editar</a>
+                                        <button type="button" class="btn btn-danger"
+                                            v-on:click="eliminar(vendedor.idVendedor)">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody> -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="footer-view">
+
+    </footer> 
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="../js/componentes.js"></script>
+</body>
+</html>

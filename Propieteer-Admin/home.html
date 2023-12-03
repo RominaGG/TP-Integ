@@ -1,4 +1,6 @@
-hdr = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Propieteer - ADMIN</title>
@@ -11,25 +13,30 @@ hdr = `
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400;500;600;700&family=Ms+Madi&family=Sacramento&family=Wix+Madefor+Display:wght@500;700&family=Ysabeau+SC:wght@500;600;800&display=swap&family=AR+One+Sans:wght@400;500;700&display=swap&family=Quicksand:wght@300;600&display=swap" rel="stylesheet" rel=" stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-`
-nav = `
-    <nav class="show-info">
-    <h1 id="feedback"> Propieteer - Admininistración </h1>
-    <ul class="views-container">
-        <li class="menu">
-            <a class="line" href="../home.html"> HOME </a>
-        </li>
-        <li class="menu">
-            <a class="line" href="propiedades.html"> PROPIEDADES </a>
-        </li>
-        <li class="menu">
-            <a class="line" href="vendedores.html"> VENDEDORES </a>
-        </li>
-    </ul>
-    </nav>
-`
-ftr = `
-    <img id="footerImagen" src="/Propieteer-Inmobiliaria/resources/logo.png" alt="PROPIETEER LOGO"
+
+</head>
+<body class="body-index-page body-show">
+    <header class="header-views">
+        <nav class="show-info">
+            <h1 id="feedback"> Propieteer - Admininistración </h1>
+            <ul class="views-container">
+                <li class="menu">
+                    <a class="line" href="home.html"> HOME </a>
+                </li>
+                <li class="menu">
+                    <a class="line" href="./HTML/propiedades.html"> PROPIEDADES </a>
+                </li>
+                <li class="menu">
+                    <a class="line" href="./HTML/vendedores.html"> VENDEDORES </a>
+                </li>
+            </ul>
+            </nav>
+    </header>
+    <main class="main-pestañas show-view">
+        <h4>Bienvenido al administrador de <span class="brand">Propieteer.</span></h4>
+    </main>
+    <footer class=" footer-view">
+        <img id="footerImagen" src="/Propieteer-Inmobiliaria/resources/logo.png" alt="PROPIETEER LOGO"
                 title="Home Page">
     <ul class="footer-contacto">
         <li>Av. Siempre Viva 1553</li>
@@ -54,7 +61,7 @@ ftr = `
     <p class="copy">Todos los derechos reservados RoMaFeLe INC 2023</p>
     <p>Sitio desarrollado por Romina Gargano, Marco Nuñez, Federica Taborda y Leando Luna - estudiantes Codo a Codo
         2023</p>
-`
-document.querySelector("head").innerHTML = hdr
-document.querySelector("header").innerHTML = nav
-document.querySelector("footer").innerHTML = ftr
+    </footer>
+    <script src="https://unpkg.com/vue@next"></script>
+</body>
+</html>
