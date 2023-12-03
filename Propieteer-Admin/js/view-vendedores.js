@@ -32,8 +32,8 @@ const vendedoresView = Vue.createApp({
                 })
         },
         //  estos metodos hay que cambiarlos para la tabla vendedors
-        eliminar(id) {
-            const url = this.url+'/' + id;
+        eliminar(idVendedor) {
+            const url = this.url+'/' + idVendedor;
             var options = {
                 method: 'DELETE',
             }
@@ -44,16 +44,21 @@ const vendedoresView = Vue.createApp({
                     location.reload(); // recarga el json luego de eliminado el registro
                 })
         },
+
         grabar(){
-            let producto = {
+            let vendedor = {
+                apellido:this.apellido,
                 nombre:this.nombre,
-                precio: this.precio,
-                stock: this.stock,
+                matricula:this.matricula,
+                profesion:this.profesion,
+                mail:this.mail,
+                telefono:this.telefono,
+                sueldo: this.sueldo,
                 imagen:this.imagen
                 // agrear los campos de la tabla (datos)
             }
             var options = {
-                body:JSON.stringify(producto),
+                body:JSON.stringify(vendedor),
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 redirect: 'follow'
@@ -61,13 +66,16 @@ const vendedoresView = Vue.createApp({
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro grabado")
-                    window.location.href = "./base.html";  // recarga base donde se ven las tablas
+                    window.location.href = "./views-code-tests.html";  // recarga base donde se ven las tablas
                 })
                 .catch(err => {
                     console.error(err);
                     alert("Error al Grabar")  // puedo mostrar el error tambien
                 })      
         }
+
+        
+
     },
     created() {
         this.fetchData(this.url)

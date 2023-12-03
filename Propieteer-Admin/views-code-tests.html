@@ -41,7 +41,7 @@
 
       <div v-else>
         <h1>Vendedores</h1>
-        <a class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
+        <a class="btn btn-primary" href="nuevoVendedor.html">Nuevo</a>
         <div v-if="error">
           <p>Lo sentimos , ........</p>
         </div>
@@ -76,7 +76,7 @@
                     <img style="width: 50px;" :src="vendedor.imagen" :alt="vendedor.nombre">
                   </td>
                   <td>
-                    <a class="btn btn-primary" :href="'vendedor_update.html?id='+ vendedor.idVendedor">Editar</a>
+                    <a class="btn btn-primary" :href="'editarVendedor.html?idVendedor='+ vendedor.idVendedor">Editar</a>
                     <button type="button" class="btn btn-danger"
                       v-on:click="eliminar(vendedor.idVendedor)">Eliminar</button>
                   </td>
