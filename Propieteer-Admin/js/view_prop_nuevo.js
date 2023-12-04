@@ -70,7 +70,7 @@ const propiedadesView = Vue.createApp({
       fetch(this.url, options)
         .then(function () {
           alert("Registro grabado");
-          window.location.href = "./propiedad_nueva.html"; // recarga base donde se ven las tablas
+          window.location.href = "./propiedades.html"; // recarga base donde se ven las tablas
         })
         .catch((err) => {
           console.error(err);
