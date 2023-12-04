@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Nueva Propiedad</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/Propieteer-Inmobiliaria/CSS/show-data.css">
+  <link rel="stylesheet" href="/Propieteer-Admin/CSS/admin-styles.css">
+  <link rel="shortcut icon" href="/Propieteer-Inmobiliaria/resources/real-estate2.png" type="image/x-icon">
+  <!-- ATRIBUTED TO: <a href="https://www.flaticon.es/iconos-gratis/bienes-raices" title="bienes raíces iconos">Bienes raíces iconos creados por Vector Valley - Flaticon</a> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400;500;600;700&family=Ms+Madi&family=Sacramento&family=Wix+Madefor+Display:wght@500;700&family=Ysabeau+SC:wght@500;600;800&display=swap&family=AR+One+Sans:wght@400;500;700&display=swap&family=Quicksand:wght@300;600&display=swap"
+    rel="stylesheet" rel=" stylesheet">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body id="formularios-bg">
+  <header id="header">
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div class="container" id="view_propiedades">
+      <form>
+        <h1>Alta de Propiedad</h1>
+
+        <div class="mb-3">
+          <label for="tipo">Tipo de vivienda: </label>
+          <input type="text" name="tipo" id="tipo" v-model="tipo">
+        </div>
+
+        <div class="mb-3">
+          <label for="descripcion">Descripcion: </label>
+          <input type="text" name="descripcion" id="descripcion" v-model="descripcion">
+        </div>
+
+        <div class="mb-3">
+          <label for="ambientes">Ambientes: </label>
+          <input type="text" name="ambientes" id="ambientes" v-model="ambientes">
+        </div>
+
+        <div class="mb-3">
+          <label for="direccion">Direccion: </label>
+          <input type="text" name="direccion" id="direccion" v-model="direccion">
+        </div>
+
+        <div class="mb-3">
+          <label for="provincia">Provincia: </label>
+          <input type="text" name="provincia" id="provincia" v-model="provincia">
+        </div>
+
+        <div class="mb-3">
+          <label for="precio">Precio: </label>
+          <input type="number" name="precio" id="precio" v-model="precio">
+        </div>
+
+        <div class="mb-3">
+          <label for="imagen">Imagen: </label>
+          <input type="text" name="imagen" id="imagen" v-model="imagen">
+          <img width="100" :src="imagen" alt="foto-vendedor" style="margin-top: 20px;">
+        </div>
+
+        <div class="mb-3">
+          <label for="propietario">Propietario: </label>
+          <input type="text" name="propietario" id="propietario" v-model="propietario">
+        </div>
+
+
+        <div class="mb-3">
+          <label for="tel_contacto">Telefono: </label>
+          <input type="text" name="tel_contacto" id="tel_contacto" v-model="tel_contacto">
+        </div>
+        <div class="mb-3">
+          <label for="mail_contacto">Email: </label>
+          <input type="text" name="mail_contacto" id="mail_contacto" v-model="mail_contacto">
+        </div>
+
+        <button type="button" class="btn btn-success" v-on:click="grabar()">
+          Guardar
+        </button>
+      </form>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="../js/view_propiedades.js"></script>
+</body>
+
+</html>

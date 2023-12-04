@@ -16,50 +16,52 @@
 
             <div v-else>
                 <h1>Propiedades</h1>
-                <a class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
+                <a class="btn btn-primary" href="propiedad_nueva.html" style="margin-bottom: 20px;">Nuevo</a>
                 <div v-if="error">
-                    <p>Lo sentimos , ........</p>
+                    <p>Lo sentimos, ha ocurrido un error inesperado. Recargue la pantalla.</p>
                 </div>
                 <div v-else>
                     <div class="table-responsive">
                         <table class="table table-hover table-dark">
                             <thead>
                                 <tr>
-                                    <th scope="col">Descripcion</th>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Tipo</th>
+                                    <th scope="col">Descripción</th>
                                     <th scope="col">Ambientes</th>
-                                    <th scope="col">Direccion</th>
+                                    <th scope="col">Dirección</th>
                                     <th scope="col">Provincia</th>
-                                    <th scope="col">Barrio</th>
-                                    <th scope="col">Mts2</th>
                                     <th scope="col">Precio</th>
-                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Foto</th>
                                     <th scope="col">Propietario</th>
-                                    <th scope="col">Tel-contacto</th>
-                                    <th scope="col">Mail-contacto</th>
-                                    <th scope="col"> </th>
-                                </tr>
+                                    <th scope="col">Telefono de Contacto</th>
+                                    <th scope="col">Email de Contacto</th>
+                                    <th scope="col"></th>
+                                  </tr>
                             </thead>
                             <tbody>
-                                <!-- <tr class="" v-for="vendedor in vendedores">
-                                    <td scope="row">{{vendedor.idVendedor}}</td>
-                                    <td>{{vendedor.apellido}}</td>
-                                    <td>{{vendedor.nombre}}</td>
-                                    <td>{{vendedor.matricula}}</td>
-                                    <td>{{vendedor.profesion}}</td>
-                                    <td>{{vendedor.mail}}</td>
-                                    <td>{{vendedor.telefono}}</td>
-                                    <td>{{vendedor.sueldo}}</td>
-                                    <td>
-                                        <img style="width: 50px;" :src="vendedor.imagen" :alt="vendedor.nombre">
-                                    </td>
-                                    <td>
-                                        <a class="btn btn-primary"
-                                            :href="'vendedor_update.html?id='+ vendedor.idVendedor">Editar</a>
-                                        <button type="button" class="btn btn-danger"
-                                            v-on:click="eliminar(vendedor.idVendedor)">Eliminar</button>
-                                    </td>
+                                <tr class="" v-for="propiedad in propiedades">
+                                  <td scope="row">{{propiedad.idPropiedad}}</td>
+                                  <td>{{propiedad.tipo}}</td>
+                                  <td>{{propiedad.descripcion}}</td>
+                                  <td>{{propiedad.ambientes}}</td>
+                                  <td>{{propiedad.direccion}}</td>
+                                  <td>{{propiedad.provincia}}</td>
+                                  <td>{{propiedad.precio}}</td>
+                                  <td>
+                                    <img style="width: 50px;" :src="propiedad.imagen" :alt="propiedad.descripcion">
+                                  </td>
+                                  <td>{{propiedad.propietario}}</td>
+                                  <td>{{propiedad.tel_contacto}}</td>
+                                  <td>{{propiedad.mail_contacto}}</td>
+                                  
+                                  <td>
+                                    <a class="btn btn-primary" :href="'propiedad_modificar.html?idPropiedad='+ propiedad.idPropiedad">Editar</a>
+                                    <button style="margin:10px" type="button" class="btn btn-danger"
+                                      v-on:click="eliminar(propiedad.idPropiedad)">Eliminar</button>
+                                  </td>
                                 </tr>
-                            </tbody> -->
+                              </tbody>
                         </table>
                     </div>
                 </div>
@@ -72,5 +74,7 @@
     </footer> 
     <script src="https://unpkg.com/vue@next"></script>
     <script src="../js/componentes.js"></script>
+    <script src="../js/view_propiedades.js"></script>
+    <script src="../js/editar_propiedad.js"></script>
 </body>
 </html>
