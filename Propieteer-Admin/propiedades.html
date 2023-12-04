@@ -66,13 +66,13 @@ Hola desde propiedas
                   <td>{{propiedad.direccion}}</td>
                   <td>{{propiedad.provincia}}</td>
                   <td>{{propiedad.precio}}</td>
-                  <td>{{propiedad.imagen}}</td>
-                  <td>{{propiedad.propietario}}</td>
-                  <td>{{propiedad.tel_contacto}}</td>
-                  <td>{{propiedad.mail_contacto}}</td>
                   <td>
                     <img style="width: 50px;" :src="propiedad.imagen" :alt="propiedad.descripcion">
                   </td>
+                  <td>{{propiedad.propietario}}</td>
+                  <td>{{propiedad.tel_contacto}}</td>
+                  <td>{{propiedad.mail_contacto}}</td>
+                  
                   <td>
                     <a class="btn btn-primary" :href="'propiedad_modificar.html?idPropiedad='+ propiedad.idPropiedad">Editar</a>
                     <button type="button" class="btn btn-danger"
