@@ -19,7 +19,7 @@ createApp({
         profesion:"", 
         sueldo:0,
         telefono:0,
-        url:'https://marconu2697.pythonanywhere.com/vendedores/' + idVendedor,
+        url:'https://rominagg.pythonanywhere.com/vendedores/' + id,
        }  
     },
     methods: {
