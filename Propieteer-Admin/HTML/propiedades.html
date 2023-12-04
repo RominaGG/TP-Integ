@@ -34,8 +34,8 @@
                                     <th scope="col">Precio</th>
                                     <th scope="col">Foto</th>
                                     <th scope="col">Propietario</th>
-                                    <th scope="col">Telefono de Contacto</th>
-                                    <th scope="col">Email de Contacto</th>
+                                    <th scope="col">Telefono</th>
+                                    <th scope="col">Mail</th>
                                     <th scope="col"></th>
                                   </tr>
                             </thead>
@@ -55,7 +55,7 @@
                                   <td>{{propiedad.tel_contacto}}</td>
                                   <td>{{propiedad.mail_contacto}}</td>
                                   
-                                  <td>
+                                  <td style="text-align: center; ">
                                     <a class="btn btn-primary" :href="'propiedad_modificar.html?idPropiedad='+ propiedad.idPropiedad">Editar</a>
                                     <button style="margin:10px" type="button" class="btn btn-danger"
                                       v-on:click="eliminar(propiedad.idPropiedad)">Eliminar</button>

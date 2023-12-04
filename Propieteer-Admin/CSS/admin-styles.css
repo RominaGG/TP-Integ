@@ -18,7 +18,7 @@
     display: flex;
     padding-top: 50px;
     justify-content: center;
-    height: 50vh;
+    height: 100%;
 }
 .show-view>h4{
     font-family:'Quicksand'!important;
@@ -65,6 +65,10 @@ label{
     font-weight: 900!important;
     padding: 2px 10px;
 }
+.footer-view{
+    margin-top: 15%;
+}
+
 @media screen and (max-width: 610px) {
     .views-container,.table-responsive{
         width: 95vw;
