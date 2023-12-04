@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
+    <title>Propiedad Nueva</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
     <!-- Bootstrap CSS v5.2.1 -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
   </head>
-
   <body>
-    <header>
+    <header id="header">
       <!-- place navbar here -->
     </header>
     <main>
-      <div class="container" id="view_propiedades">
+      <div class="container" id="propiedadesView">
         <form
           style="
             background-color: aliceblue;
@@ -32,17 +29,23 @@
             padding: 20px;
           "
         >
-          <h1>Agregar propiedad</h1>
+          <h2>Nueva Propiedad</h2>
+
+          <div class="mb-3">
+            <label for="tipo">Tipo</label>
+            <input type="text" name="tipo" id="tipo" v-model="tipo" />
+          </div>
 
           <div class="mb-3">
             <label for="descripcion">Descripcion</label>
             <input
-              type="text-area"
+              type="text"
               name="descripcion"
               id="descripcion"
               v-model="descripcion"
             />
           </div>
+
           <div class="mb-3">
             <label for="ambientes">Ambientes</label>
             <input
@@ -52,43 +55,64 @@
               v-model="ambientes"
             />
           </div>
+
+          <div class="mb-3">
+            <label for="direccion">Direccion</label>
+            <input
+              type="text"
+              name="direccion"
+              id="direccion"
+              v-model="direccion"
+            />
+          </div>
+
           <div class="mb-3">
             <label for="provincia">Provincia</label>
-            <input type="text" name="provincia" id="" v-model="provincia" />
+            <input
+              type="text"
+              name="provincia"
+              id="provincia"
+              v-model="provincia"
+            />
           </div>
-          <div class="mb-3">
-            <label for="direccion">Dirección</label>
-            <input type="text" name="direccion" id="" v-model="direccion" />
-          </div>
+
           <div class="mb-3">
             <label for="precio">Precio</label>
-            <input type="number" name="precio" id="" v-model="precio" />
+            <input type="number" name="precio" id="precio" v-model="precio" />
           </div>
+
           <div class="mb-3">
             <label for="imagen">Imagen</label>
             <input type="text" name="imagen" id="imagen" v-model="imagen" />
-            <img width="100" :src="imagen" alt="Hola soy alternativa" />
+            <img width="100" :src="imagen" alt="" />
           </div>
 
           <div class="mb-3">
             <label for="propietario">Propietario</label>
-            <input type="text" name="propietario" id="" v-model="propietario" />
+            <input
+              type="text"
+              name="propietario"
+              id="propietario"
+              v-model="propietario"
+            />
           </div>
+
           <div class="mb-3">
             <label for="tel_contacto">Telefono</label>
             <input
               type="text"
               name="tel_contacto"
-              id=""
+              id="tel_contacto"
               v-model="tel_contacto"
             />
           </div>
+
           <div class="mb-3">
             <label for="mail_contacto">Email</label>
             <input
               type="text"
               name="mail_contacto"
-              id=""
+              id="mail_contacto"
               v-model="mail_contacto"
             />
           </div>
@@ -103,8 +127,17 @@
       <!-- place footer here -->
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://unpkg.com/vue@next"></script>
-
-    <script src="C:\Users\romin\OneDrive\Escritorio\TPO_Ultimo\TP-Integrador\Propieteer-Admin\js\view_propiedades.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/view_prop_nuevo.js"></script>
   </body>
 </html>

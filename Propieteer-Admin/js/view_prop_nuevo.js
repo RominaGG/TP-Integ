@@ -6,18 +6,17 @@ const propiedadesView = Vue.createApp({
       url: "https://rominagg.pythonanywhere.com/propiedades", // si ya lo subieron a pythonanywhere
       error: false,
       /*atributos para el guardar los valores del formulario */
-      tipo:"",
-      ambientes: "",
       idPropiedad: 0,
-      imagen: "",
-      mail_contacto: "",
+      tipo: "",
       descripcion: "",
+      ambientes: "",
       direccion: "",
-      propietario: "",
-      precio: 0,
-      tel_contacto: "",
       provincia: "",
-      
+      precio: 0,
+      imagen: "",
+      propietario: "",
+      tel_contacto: "",
+      mail_contacto: "",
     };
   },
   methods: {
@@ -48,17 +47,18 @@ const propiedadesView = Vue.createApp({
         });
     },
 
-   /* grabar() {
+    grabar() {
       let propiedad = {
-        ambientes: this.ambientes,
+        tipo: this.tipo,
         descripcion: this.descripcion,
+        ambientes: this.ambientes,
         direccion: this.direccion,
-        imagen: this.imagen,
-        mail_contacto: this.mail_contacto,
-        precio: this.precio,
-        propietario: this.propietario,
         provincia: this.provincia,
+        precio: this.precio,
+        imagen: this.imagen,
+        propietario: this.propietario,
         tel_contacto: this.tel_contacto,
+        mail_contacto: this.mail_contacto,
         // agrear los campos de la tabla (datos)
       };
       var options = {
@@ -70,64 +70,15 @@ const propiedadesView = Vue.createApp({
       fetch(this.url, options)
         .then(function () {
           alert("Registro grabado");
-          window.location.href = "./prop_admin.html"; // recarga base donde se ven las tablas
+          window.location.href = "./propiedad_nueva.html"; // recarga base donde se ven las tablas
         })
         .catch((err) => {
           console.error(err);
           alert("Error al Grabar"); // puedo mostrar el error tambien
         });
-    },*/
-    grabar() {
-      let propiedad = {
-        tipo:this.tipo,
-        ambientes: this.ambientes,
-        descripcion: this.descripcion,
-        direccion: this.direccion,
-        imagen: this.imagen,
-        mail_contacto: this.mail_contacto,
-        precio: this.precio,
-        propietario: this.propietario,
-        provincia: this.provincia,
-        tel_contacto: this.tel_contacto,
-        // agrear los campos de la tabla (datos)
-      };
-    
-      var options = {
-        body: JSON.stringify(propiedad),
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        redirect: "follow",
-      };
-    
-      fetch(this.url, options)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then(data => {
-          // Manejar la respuesta exitosa de la API aquí
-          alert("Registro grabado exitosamente");
-          console.log(data); // Mostrar la respuesta de la API en la consola para verificar
-        })
-        .catch(error => {
-          console.error('There was an error!', error);
-          alert("Error al grabar el registro. Consulta la consola para más detalles.");
-        });
     },
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
   },
   created() {
     this.fetchData(this.url);
   },
-}).mount("#view_propiedades");
+}).mount("#propiedadesView");
