@@ -5,6 +5,7 @@ const propiedadesView = Vue.createApp({
       // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
       url: "https://rominagg.pythonanywhere.com/propiedades", // si ya lo subieron a pythonanywhere
       error: false,
+
       /*atributos para el guardar los valores del formulario */
       idPropiedad: 0,
       tipo: "",
@@ -35,10 +36,16 @@ const propiedadesView = Vue.createApp({
     },
     //  estos metodos hay que cambiarlos para la tabla vendedors
     eliminar(idPropiedad) {
-      const url = this.url + "/" + idPropiedad;
-      var options = {
-        method: "DELETE",
-      };
+      const isConfirmed = window.confirm(
+        "¿Estás seguro de que quieres eliminar este registro?"
+      );
+
+      if (isConfirmed) {
+        const url = this.url + "/" + idVendedor;
+        var options = {
+          method: "DELETE",
+        };
+      }
       fetch(url, options)
         .then((res) => res.text()) // or res.json()
         .then((res) => {

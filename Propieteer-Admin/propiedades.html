@@ -1,3 +1,110 @@
 <!-- traer tabla con propiedades -->
 Hola desde propiedas
 <!-- conectar con view_prop_nuevo.js -->
+<!doctype html>
+<html id="show" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propieteer - ADMIN -</title>
+  <link rel="stylesheet" href="/Propieteer-Inmobiliaria/CSS/styles.css">
+  <link rel="stylesheet" href="/Propieteer-Inmobiliaria/CSS/show-data.css">
+  <link rel="shortcut icon" href="/Propieteer-Inmobiliaria/resources/real-estate2.png" type="image/x-icon">
+  <!-- ATRIBUTED TO: <a href="https://www.flaticon.es/iconos-gratis/bienes-raices" title="bienes raíces iconos">Bienes raíces iconos creados por Vector Valley - Flaticon</a> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400;500;600;700&family=Ms+Madi&family=Sacramento&family=Wix+Madefor+Display:wght@500;700&family=Ysabeau+SC:wght@500;600;800&display=swap&family=AR+One+Sans:wght@400;500;700&display=swap&family=Quicksand:wght@300;600&display=swap"
+    rel="stylesheet" rel=" stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="body-index-page body-show">
+
+  <!-- conectamos la app VUE con la seccion del html -->
+ 
+
+  <main class="main-pestañas show-view">
+
+    <div id="propiedadesView" class="container">
+      <div v-if="loading" id="spinner-container">
+        <div class="spinner-border" id="spinner"> </div>
+      </div>
+
+      <div v-else>
+        <h1>propiedades</h1>
+        <a class="btn btn-primary" href="./propiedad_nueva.html">Nuevo</a>
+        <div v-if="error">
+          <p>Lo sentimos , ........</p>
+        </div>
+        <div v-else>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Tipo</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Ambientes</th>
+                  <th scope="col">Dirección</th>
+                  <th scope="col">Provincia</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Foto</th>
+                  <th scope="col">Propietario</th>
+                  <th scope="col">Telefono de Contacto</th>
+                  <th scope="col">Email de Contacto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="" v-for="propiedad in propiedades">
+                  <td scope="row">{{propiedad.idPropiedad}}</td>
+                  <td>{{propiedad.tipo}}</td>
+                  <td>{{propiedad.descripcion}}</td>
+                  <td>{{propiedad.ambientes}}</td>
+                  <td>{{propiedad.direccion}}</td>
+                  <td>{{propiedad.provincia}}</td>
+                  <td>{{propiedad.precio}}</td>
+                  <td>{{propiedad.imagen}}</td>
+                  <td>{{propiedad.propietario}}</td>
+                  <td>{{propiedad.tel_contacto}}</td>
+                  <td>{{propiedad.mail_contacto}}</td>
+                  <td>
+                    <img style="width: 50px;" :src="propiedad.imagen" :alt="propiedad.descripcion">
+                  </td>
+                  <td>
+                    <a class="btn btn-primary" :href="'propiedad_modificar.html?idPropiedad='+ propiedad.idPropiedad">Editar</a>
+                    <button type="button" class="btn btn-danger"
+                      v-on:click="eliminar(propiedad.idPropiedad)">Eliminar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- fin de la app VUE -->
+
+  <footer class=" footer-view">
+    
+  </footer>
+
+  <!-- linkeamos VUE -->
+  <script src="https://unpkg.com/vue@next"></script>
+  <!-- conectamos html con los script a traer -->
+  <script src="js/componentes.js"></script>
+  <script src="./js/view_prop_nuevo.js"></script>
+  <script src="./js/modif_prop.js"></script>
+  <!-- conectamos esos script con VUE para cambiar las vistas -->
+  <script src="js/scriptVUE.js"></script>
+
+</body>
+
+</html>
+
