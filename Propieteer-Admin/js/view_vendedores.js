@@ -38,7 +38,7 @@ const vendedoresView = Vue.createApp({
             const isConfirmed = window.confirm('¿Estás seguro de que quieres eliminar este registro?');
 
             if (isConfirmed) {
-                const url = this.url + '/' + idVendedor;
+                const url = this.url + '/' + this.idVendedor;
                 var options = {
                     method: 'DELETE',
                 };

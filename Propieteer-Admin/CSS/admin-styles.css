@@ -59,6 +59,8 @@ form>h1{
     font-family:'Quicksand'!important;
     font-weight: 900!important;
     font-size: 2rem;
+    line-height: 150%;
+    width: 500px;
 }
 label{
     font-family:'Quicksand'!important;

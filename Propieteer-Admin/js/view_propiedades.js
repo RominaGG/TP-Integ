@@ -5,7 +5,7 @@ const propiedadesView = Vue.createApp({
       // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
       url: "https://rominagg.pythonanywhere.com/propiedades", // si ya lo subieron a pythonanywhere
       error: false,
-      loading:true,
+      loading: true,
       /*atributos para el guardar los valores del formulario */
       idPropiedad: 0,
       tipo: "",
@@ -42,17 +42,17 @@ const propiedadesView = Vue.createApp({
       );
 
       if (isConfirmed) {
-        const url = this.url + "/" + idVendedor;
+        const url = this.url + "/" + this.idVendedor;
         var options = {
           method: "DELETE",
-        };
-      }
-      fetch(url, options)
-        .then((res) => res.text()) // or res.json()
-        .then((res) => {
-          alert("Registro Eliminado");
-          location.reload(); // recarga el json luego de eliminado el registro
-        });
+        }
+        fetch(url, options)
+          .then((res) => res.text()) // or res.json()
+          .then((res) => {
+            alert("Registro Eliminado");
+            location.reload(); // recarga el json luego de eliminado el registro
+          });
+      };
     },
 
     grabar() {

@@ -36,6 +36,7 @@ createApp({
                         console.log('Empty response received');
                     } else {
                         console.log(data)
+                        this.idVendedor = data.idVendedor
                         this.apellido = data.apellido
                         this.nombre = data.nombre
                         this.matricula = data.matricula
@@ -71,7 +72,7 @@ createApp({
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro modificado")
-                    window.location.href = "./views-code-tests.html";
+                    window.location.href = "./vendedores.html";
                 })
                 .catch(err => {
                     console.error(err);
@@ -82,4 +83,4 @@ createApp({
     created() {
         this.fetchData(this.url)
     },
-}).mount('#appeditar')
+}).mount('#appeditar1')

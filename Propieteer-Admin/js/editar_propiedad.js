@@ -11,7 +11,6 @@ createApp({
     data() {
       return {
         error: false,
-    
         idPropiedad:0,
         tipo:"",
         descripcion:"",
@@ -40,6 +39,7 @@ createApp({
                         console.log('Empty response received');
                     } else {
                         console.log(data)
+                        this.idPropiedad = data.idPropiedad
                         this.tipo = data.tipo
                         this.descripcion = data.descripcion
                         this.ambientes = data.ambientes
@@ -92,4 +92,4 @@ createApp({
     created() {
         this.fetchData(this.url)
     },
-}).mount('#appeditar')
+}).mount('#appeditar2')
