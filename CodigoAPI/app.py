@@ -8,7 +8,7 @@ CORS(app) #modulo cors es para que me permita acceder desde el frontend al backe
 
 
 # configuro la base de datos, con el nombre el usuario y la clave
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:kayser2012@localhost/propieteeradmin'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:rominagargano@localhost/administracion'
 # URI de la BBDD                          driver de la BD  user:clave@URLBBDD/nombreBBDD
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False #none
 db= SQLAlchemy(app)   #crea el objeto db de la clase SQLAlquemy
@@ -45,6 +45,7 @@ class Vendedores(db.Model):   # la clase Producto hereda de db.Model
 class Propiedades(db.Model):   # la clase Producto hereda de db.Model   
 
     idPropiedad=db.Column(db.Integer, primary_key=True)
+    tipo=db.Column(db.String(100))
     direccion=db.Column(db.String(100))
     provincia=db.Column(db.String(100))
     precio=db.Column(db.Double)
@@ -56,7 +57,8 @@ class Propiedades(db.Model):   # la clase Producto hereda de db.Model
     mail_contacto=db.Column(db.String(100))
 
 
-    def __init__(self,direccion,provincia,precio,ambientes,descripcion,imagen,propietario,tel_contacto,mail_contacto):   #crea el  constructor de la clase
+    def __init__(self,tipo,direccion,provincia,precio,ambientes,descripcion,imagen,propietario,tel_contacto,mail_contacto):   #crea el  constructor de la clase
+        self.tipo=tipo
         self.direccion=direccion
         self.provincia=provincia
         self.precio=precio
@@ -85,7 +87,7 @@ class VendedorSchema(ma.Schema):
 
 vendedor_schema=VendedorSchema()    
 
-vendedor_schema=VendedorSchema(many=True)  
+vendedores_schema=VendedorSchema(many=True)  
 
 
 
@@ -94,7 +96,7 @@ vendedor_schema=VendedorSchema(many=True)
 @app.route('/vendedores',methods=['GET'])
 def get_Vendedores():
     all_vendedores=Vendedores.query.all()         # el metodo query.all() lo hereda de db.Model
-    result=vendedor_schema.dump(all_vendedores)  # el metodo dump() lo hereda de ma.schema y
+    result=vendedores_schema.dump(all_vendedores)  # el metodo dump() lo hereda de ma.schema y
                                                  # trae todos los registros de la tabla
     return jsonify(result)                       # retorna un JSON de todos los registros de la tabla
 
@@ -154,13 +156,13 @@ def update_vendedor(idVendedor):
 ##
 class PropiedadSchema(ma.Schema):
     class Meta:
-        fields=('idPropiedad','direccion','provincia','precio','ambientes','descripcion','imagen','propietario','tel_contacto','mail_contacto')
+        fields=('idPropiedad','tipo','direccion','provincia','precio','ambientes','descripcion','imagen','propietario','tel_contacto','mail_contacto')
 
 
 
 
 propiedad_schema=PropiedadSchema()           
-propiedad_schema=PropiedadSchema(many=True) 
+propiedades_schema=PropiedadSchema(many=True) 
 
 
 
@@ -169,7 +171,7 @@ propiedad_schema=PropiedadSchema(many=True)
 @app.route('/propiedades',methods=['GET'])
 def get_propiedades():
     all_propiedades=Propiedades.query.all()         # el metodo query.all() lo hereda de db.Model
-    result=propiedad_schema.dump(all_propiedades)  # el metodo dump() lo hereda de ma.schema y
+    result=propiedades_schema.dump(all_propiedades)  # el metodo dump() lo hereda de ma.schema y
                                                  # trae todos los registros de la tabla
     return jsonify(result)                       # retorna un JSON de todos los registros de la tabla
 
@@ -193,6 +195,7 @@ def delete_propiedad(idPropiedad):
 @app.route('/propiedades', methods=['POST']) # crea ruta o endpoint
 def create_propiedad():
     #print(request.json)  # request.json contiene el json que envio el cliente
+    tipo=request.json['tipo']
     direccion=request.json['direccion']
     provincia=request.json['provincia']
     precio=request.json['precio']
@@ -203,7 +206,7 @@ def create_propiedad():
     tel_contacto=request.json['tel_contacto']
     mail_contacto=request.json['mail_contacto']
 
-    new_propiedad=Propiedades(direccion,provincia,precio,ambientes,descripcion,imagen,propietario,tel_contacto,mail_contacto)
+    new_propiedad=Propiedades(tipo,direccion,provincia,precio,ambientes,descripcion,imagen,propietario,tel_contacto,mail_contacto)
 
     db.session.add(new_propiedad)
     db.session.commit() # confirma el alta
@@ -213,7 +216,7 @@ def create_propiedad():
 @app.route('/propiedades/<idPropiedad>' ,methods=['PUT'])
 def update_propiedad(idPropiedad):
     propiedad=Propiedades.query.get(idPropiedad)
- 
+    propiedad.tipo=request.json['tipo']   
     propiedad.direccion=request.json['direccion']
     propiedad.provincia=request.json['provincia']
     propiedad.precio=request.json['precio']
