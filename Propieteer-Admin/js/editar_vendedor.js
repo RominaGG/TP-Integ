@@ -5,8 +5,8 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        apellido:"",
         idVendedor:0,
+        apellido:"",
         imagen:"",
         mail:"",
         matricula:"",
