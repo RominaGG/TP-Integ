@@ -9,18 +9,18 @@ console.log(id);
 const { createApp } = Vue
 createApp({
     data() {
-        return {
-            apellido: "",
-            idVendedor: 0,
-            imagen: "",
-            mail: "",
-            matricula: "",
-            nombre: "",
-            profesion: "",
-            sueldo: 0,
-            telefono: 0,
-            url: 'https://marconu2697.pythonanywhere.com/vendedores/' + id,
-        }
+      return {
+        apellido:"",
+        idVendedor:0,
+        imagen:"",
+        mail:"",
+        matricula:"",
+        nombre:"",
+        profesion:"", 
+        sueldo:0,
+        telefono:0,
+        url:'https://marconu2697.pythonanywhere.com/vendedores/' + idVendedor,
+       }  
     },
     methods: {
         fetchData(url) {
