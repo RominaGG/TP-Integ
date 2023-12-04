@@ -7,7 +7,7 @@
     display: flex;
     margin-top: 50px;
     left: 25%;
-    width: 80vw;
+    width: 75vw;
     align-items: center;
     justify-self: center;
     justify-content: space-around;
@@ -43,4 +43,33 @@
     width: 4rem;
     height: 4rem;
     color: seashell;
+}
+#formularios-bg{
+    background-color: black;
+}
+form{
+    background-color: black;
+    color: aliceblue;
+    margin:10px auto ; 
+    width: 400px; 
+    padding: 20px;
+}
+form>h1{
+    padding: 50px;
+    font-family:'Quicksand'!important;
+    font-weight: 900!important;
+    font-size: 2rem;
+}
+label{
+    font-family:'Quicksand'!important;
+    font-weight: 900!important;
+    padding: 2px 10px;
+}
+@media screen and (max-width: 610px) {
+    .views-container,.table-responsive{
+        width: 95vw;
+    }
+    .show-view{
+        padding:1px;
+    }
 }
