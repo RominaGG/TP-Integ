@@ -42,10 +42,10 @@ const propiedadesView = Vue.createApp({
       );
 
       if (isConfirmed) {
-        const url = this.url + "/" + this.idVendedor;
+        const url = this.url + "/" + idPropiedad;
         var options = {
           method: "DELETE",
-        }
+        };
         fetch(url, options)
           .then((res) => res.text()) // or res.json()
           .then((res) => {

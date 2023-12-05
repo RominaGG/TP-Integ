@@ -38,7 +38,7 @@ const vendedoresView = Vue.createApp({
             const isConfirmed = window.confirm('¿Estás seguro de que quieres eliminar este registro?');
 
             if (isConfirmed) {
-                const url = this.url + '/' + this.idVendedor;
+                const url = this.url + '/' + idVendedor;
                 var options = {
                     method: 'DELETE',
                 };
@@ -76,7 +76,7 @@ const vendedoresView = Vue.createApp({
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro grabado")
-                    window.location.href = "./views-code-tests.html";  // recarga base donde se ven las tablas
+                    window.location.href = "./vendedores.html";  // recarga base donde se ven las tablas
                 })
                 .catch(err => {
                     console.error(err);
