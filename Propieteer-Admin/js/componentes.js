@@ -3,10 +3,10 @@ hdr = `
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Propieteer - ADMIN</title>
-    <link rel="stylesheet" href="/Propieteer-Inmobiliaria/CSS/styles.css">
-    <link rel="stylesheet" href="/Propieteer-Inmobiliaria/CSS/show-data.css">
-    <link rel="stylesheet" href="/Propieteer-Admin/CSS/admin-styles.css">
-    <link rel="shortcut icon" href="/Propieteer-Inmobiliaria/resources/real-estate2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/show-data.css">
+    <link rel="stylesheet" href="../CSS/admin-styles.css">
+    <link rel="shortcut icon" href="../resources/real-estate2.png" type="image/x-icon">
     <!-- ATRIBUTED TO: <a href="https://www.flaticon.es/iconos-gratis/bienes-raices" title="bienes raíces iconos">Bienes raíces iconos creados por Vector Valley - Flaticon</a> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,7 @@ nav = `
     </nav>
 `
 ftr = `
-    <img id="footerImagen" src="/Propieteer-Inmobiliaria/resources/logo.png" alt="PROPIETEER LOGO"
+    <img id="footerImagen" src="../resources/logo.png" alt="PROPIETEER LOGO"
                 title="Home Page">
     <ul class="footer-contacto">
         <li>Av. Siempre Viva 1553</li>
@@ -39,16 +39,16 @@ ftr = `
     </ul>
     <ul class="redes-container">
         <li><a href="https://www.instagram.com" target="_blank"><img
-                    src="/Propieteer-Inmobiliaria/resources/instagram.svg" alt="propieteer instagram"
+                    src="../resources/instagram.svg" alt="propieteer instagram"
                     class="redes"></a></li>
         <li><a href="https://www.facebook.com" target="_blank"><img
-                    src="/Propieteer-Inmobiliaria/resources/square-facebook.svg" alt="propieteer facebook"
+                    src="../resources/square-facebook.svg" alt="propieteer facebook"
                     class="redes"></a></li>
         <li><a href="https://www.twitter.com" target="_blank"><img
-                    src="/Propieteer-Inmobiliaria/resources/twitter.svg" alt="propieteer twitter" class="redes"></a>
+                    src="../resources/twitter.svg" alt="propieteer twitter" class="redes"></a>
         </li>
         <li><a href="https://api.whatsapp.com/send?phone=11674158639121&text=Hola!%20Me%20gustaría%20hacer%20unar%20consulta%20%F0%9F%98%8A"
-                target="_blank"><img src="/Propieteer-Inmobiliaria/resources/whatsapp.svg" alt="propieteer whatsapp"
+                target="_blank"><img src="../resources/whatsapp.svg" alt="propieteer whatsapp"
                     class="redes"></a>
         </li>
     </ul>
