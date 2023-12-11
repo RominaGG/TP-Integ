@@ -2,14 +2,14 @@ const vendedoresView = Vue.createApp({
     data() {
         return {
             vendedores: [],
-            // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
-            url: 'https://rominagg.pythonanywhere.com/vendedores',   // si ya lo subieron a pythonanywhere
+            url: 'https://rominagg.pythonanywhere.com/vendedores',   
             error: false,
             loading: true,
             /*atributos para el guardar los valores del formulario */
             apellido: "",
             idVendedor: 0,
             imagen: "",
+            descripcion:"",
             mail: "",
             matricula: "",
             nombre: "",
