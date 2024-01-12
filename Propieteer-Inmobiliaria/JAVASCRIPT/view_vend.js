@@ -16,6 +16,7 @@ const vendedoresView = Vue.createApp({
             profesion: "",
             sueldo: 0,
             telefono: 0,
+            
         }
     },
     methods: {
